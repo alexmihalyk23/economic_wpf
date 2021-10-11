@@ -28,7 +28,6 @@ C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\bin\Debug\MaterialDesignT
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\bin\Debug\MaterialDesignColors.pdb
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.csprojAssemblyReference.cache
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\MainWindow.g.cs
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\App.g.cs
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf_MarkupCompile.cache
@@ -42,3 +41,4 @@ C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.c
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.csproj.CopyComplete
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.exe
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.pdb
+C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.csproj.AssemblyReference.cache

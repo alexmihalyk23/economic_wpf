@@ -34,10 +34,37 @@ namespace ekonomika_wpf
 
         private void calculate_Click(object sender, RoutedEventArgs e)
         {
-            int credit_sum = int.Parse(Credit_sum.Text);
-            int procent_int = int.Parse(procent.Text);
-            double result = credit_sum * (procent_int * 0.01);
-            Result.Text = result.ToString();
+            //А = К * (П / (1 + П) - М - 1), где К – сумма кредита, П – процентная ставка, М – количество месяцев. 
+            Console.WriteLine("AAAAAAAAAAAAAa"+Credit_sum.Text);
+            if ((!String.IsNullOrEmpty(Credit_sum.Text)) && (!String.IsNullOrEmpty(procent.Text)))
+            {
+                 //Сумма кредита
+                int credit_sum = int.Parse(Credit_sum.Text);
+                //     Процент в числе(5 типо)
+                double procent_double = double.Parse(procent.Text);
+                //     ежемесечная
+                double everyMounthProcent = procent_double / 100 / 12; 
+                //Console.WriteLine(Start_date.SelectedDate.Value.Date);
+                //DateTime date_of_issue = Start_date.SelectedDate.Value.Date;
+                DateTime today = DateTime.Today;
+                Console.WriteLine(today);
+                // количество месяцев
+                int Month_count = int.Parse(srok.Text);
+
+
+                double S = credit_sum;
+                double i = everyMounthProcent;
+                int n = Month_count;
+
+                //double result = S * (everyMounthProcent + everyMounthProcent / (Math.Pow(1 + everyMounthProcent, Month_count)) - 1); //????????
+                double result = S * (i + i / ((Math.Pow(1 + i, n)) - 1)) * n;
+                //Console.WriteLine();
+                string result_str = String.Format("{0:0.00}", result);
+                pereplata.Text = String.Format("{0:0.00}",result - S);
+                Result.Text = result_str;
+                
+            }
+            
         }
     }
 }
