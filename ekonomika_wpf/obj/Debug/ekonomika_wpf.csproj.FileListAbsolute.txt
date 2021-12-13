@@ -38,7 +38,6 @@ C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.g
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.Properties.Resources.resources
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.csproj.GenerateResource.cache
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.csproj.CoreCompileInputs.cache
-C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.csproj.CopyComplete
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.exe
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.pdb
 C:\Users\alexm\Source\Repos\economic_wpf\ekonomika_wpf\obj\Debug\ekonomika_wpf.csproj.AssemblyReference.cache

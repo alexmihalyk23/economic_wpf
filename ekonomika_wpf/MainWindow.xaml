@@ -6,33 +6,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ekonomika_wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="820" ResizeMode="NoResize">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="401*"/>
-            <ColumnDefinition Width="393*"/>
+            <ColumnDefinition Width="435*"/>
+            <ColumnDefinition Width="358*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="197*"/>
             <RowDefinition Height="223*"/>
         </Grid.RowDefinitions>
-        <TextBox materialDesign:HintAssist.Hint="Сумма кредита/займа" PreviewTextInput="Credit_sum_PreviewTextInput" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Row="0" Background="#f5f5f5" Grid.Column="0" Name="Credit_sum" Grid.ColumnSpan="1" Margin="44,25,48.8,113.8" FontSize="16">
+        <TextBox materialDesign:HintAssist.Hint="Сумма кредита/займа" PreviewTextInput="Credit_sum_PreviewTextInput" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Row="0" Background="#f5f5f5" Grid.Column="0" Name="Credit_sum" Grid.ColumnSpan="1" Margin="44,25,49.2,113.8" FontSize="16">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox materialDesign:HintAssist.Hint="Процентная ставка, % годовых" PreviewTextInput="Credit_sum_PreviewTextInput" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Row="0" Background="#f5f5f5" Grid.Column="0" x:Name="procent" Grid.ColumnSpan="1" Margin="44,106,48.8,32.8" FontSize="16">
+        <TextBox materialDesign:HintAssist.Hint="Процентная ставка, % годовых" PreviewTextInput="Credit_sum_PreviewTextInput" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Row="0" Background="#f5f5f5" Grid.Column="0" x:Name="procent" Grid.ColumnSpan="1" Margin="44,106,49.2,32.8" FontSize="16">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Button Grid.Column="1" Grid.Row="1" Margin="216.2,149.2,35.6,37" Name="calculate" Height="Auto" Click="calculate_Click" FontSize="16" >Расчитать</Button>
-        <TextBox materialDesign:HintAssist.Hint="Срок кредита/займа" PreviewTextInput="Credit_sum_PreviewTextInput" Grid.Row="0" Background="#f5f5f5" Grid.Column="1" x:Name="srok" Grid.ColumnSpan="1" Margin="49.2,25,35.6,113.8" FontSize="16">
+        <Button Grid.Column="1" Grid.Row="1" Margin="215.8,149.2,35.6,37" Name="calculate" Height="Auto" Click="calculate_Click" FontSize="16" >Расчитать</Button>
+        <TextBox materialDesign:HintAssist.Hint="Срок кредита в годах" PreviewTextInput="Credit_sum_PreviewTextInput" Grid.Row="0" Background="#f5f5f5" Grid.Column="1" x:Name="srok" Grid.ColumnSpan="1" Margin="48.8,25,35.6,113.8" FontSize="16">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -42,28 +42,39 @@
                 <StaticResource ResourceKey="MaterialDesignFloatingHintTextBox"/>
             </TextBox.Style>
         </TextBox>
-        <materialDesign:Card Grid.Row="0" Grid.Column="1" Margin="49.2,106,35.6,32.8" Background="#f5f5f5">
-            <DatePicker x:Name="Start_date" Background="#f5f5f5" materialDesign:HintAssist.Hint="Дата выдачи" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Grid.Column="1" Height="58" Margin="0,0,0,-0.4" FontSize="16" />
-        </materialDesign:Card>
-        <ComboBox  Name="Select_type" SelectedIndex="0" Grid.Column="1" Grid.Row="1" Height="30" VerticalAlignment="Top" Margin="49.2,0.2,35.6,0">
+        <ComboBox  Name="Select_type" SelectedIndex="0" Grid.Column="1" Height="58" VerticalAlignment="Top" Margin="48.8,106,35.6,0">
             <TextBlock FontSize="18" Text="Аннуитетный"/>
             <TextBlock FontSize="18" Text="Дифференцированный"/>
         </ComboBox>
-        <TextBlock Grid.Row="1" Grid.Column="0" Margin="20,96.2,233.8,92" Foreground="#FF897575" FontSize="22">Всего Выплат:</TextBlock>
-        <materialDesign:Card Grid.Row="1" Grid.Column="0" Margin="20,149.2,233.8,37">
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="50,10.2,204.2,178" Foreground="#FF897575" FontSize="22">Всего Выплат:</TextBlock>
+        <materialDesign:Card Grid.Row="1" Grid.Column="0" Margin="50,63.2,210.4,123">
             <Grid>
                 <TextBlock x:Name="Result" Background="#f5f5f5" FontSize="22"  FontWeight="Bold" Margin="0,0,-0.8,-0.2"><Run Text="0"/></TextBlock>
                 <TextBlock Text="₽" Margin="118 0 0 0" Foreground="Black" FontSize="25"/>
             </Grid>
 
         </materialDesign:Card>
-        <materialDesign:Card Grid.Row="1" Grid.Column="0" Margin="215,149.2,48.8,37">
+
+
+        <materialDesign:Card Grid.Row="1" Grid.Column="0" Margin="247,63.2,19.4,123">
             <Grid>
-                <TextBlock x:Name="pereplata" Background="#f5f5f5" FontSize="22"  FontWeight="Bold" Margin="0,0,-0.8,-0.2"><Run Text="0"/></TextBlock>
+                <TextBlock x:Name="pereplata" Background="#f5f5f5" FontSize="22"  FontWeight="Bold" Margin="0,0,-0.2,-0.2"><Run Text="0"/></TextBlock>
                 <TextBlock Text="₽" Margin="118 0 0 0" Foreground="Black" FontSize="25"/>
             </Grid>
+
         </materialDesign:Card>
-        <TextBlock Grid.Row="1" Grid.Column="0" Margin="215,96.2,38.8,92" Foreground="#FF897575" FontSize="22"><Run Text="Переплата:"/></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="44,127.2,210.2,39" Foreground="#FF897575" FontSize="22">Ежемесячный<LineBreak></LineBreak> платеж:</TextBlock>
+
+        <materialDesign:Card Grid.Row="1" Grid.Column="0" Margin="245,149.2,19.2,37">
+            <Grid>
+                <TextBlock x:Name="mounthlyPayment" Background="#f5f5f5" FontSize="22"  FontWeight="Bold" Margin="0,0,-0.2,-0.2"><Run Text="0"/></TextBlock>
+                <TextBlock Text="₽" Margin="118 0 0 0" Foreground="Black" FontSize="25"/>
+            </Grid>
+
+        </materialDesign:Card>
+
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="245,10.2,9.2,178" Foreground="#FF897575" FontSize="22"><Run Text="Всего процентов:"/></TextBlock>
 
 
         <!--<TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>-->

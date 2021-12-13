@@ -44,23 +44,23 @@ namespace ekonomika_wpf
                 double procent_double = double.Parse(procent.Text);
                 //     ежемесечная
                 double everyMounthProcent = procent_double / 100 / 12; 
-                //Console.WriteLine(Start_date.SelectedDate.Value.Date);
-                //DateTime date_of_issue = Start_date.SelectedDate.Value.Date;
-                DateTime today = DateTime.Today;
-                Console.WriteLine(today);
-                // количество месяцев
-                int Month_count = int.Parse(srok.Text);
+
+                int Month_count = int.Parse(srok.Text) * 12;
+
+                double x = Math.Pow(1+ everyMounthProcent, Month_count);
+
+                double monthly = (credit_sum * x * everyMounthProcent) /  (x - 1);
+
+                double monthlyPayments = monthly;
+                double totalPayment = monthly * Month_count;
+                double totalInterest = (monthly * Month_count) - credit_sum;
 
 
-                double S = credit_sum;
-                double i = everyMounthProcent;
-                int n = Month_count;
 
-                //double result = S * (everyMounthProcent + everyMounthProcent / (Math.Pow(1 + everyMounthProcent, Month_count)) - 1); //????????
-                double result = S * (i + i / ((Math.Pow(1 + i, n)) - 1)) * n;
-                //Console.WriteLine();
-                string result_str = String.Format("{0:0.00}", result);
-                pereplata.Text = String.Format("{0:0.00}",result - S);
+
+                string result_str = String.Format("{0:0.00}", totalPayment);
+                pereplata.Text = String.Format("{0:0.00}",totalInterest);
+                mounthlyPayment.Text = String.Format("{0:0.00}", monthlyPayments);
                 Result.Text = result_str;
                 
             }
